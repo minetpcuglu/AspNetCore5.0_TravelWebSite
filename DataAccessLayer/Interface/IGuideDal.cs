@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccessLayer.Interface
 {
-   public interface IDesrinationDal : IGenericDal<Destination>
+    public interface IGuideDal : IGenericDal<Guide>
     {
     }
 }

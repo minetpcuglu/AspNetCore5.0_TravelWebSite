@@ -6,8 +6,13 @@
 
   <ItemGroup>
     <Folder Include="Concrete\" />
-    <Folder Include="Abstract\" />
+    <Folder Include="Interface\" />
     <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
   </ItemGroup>
 
   <ItemGroup>

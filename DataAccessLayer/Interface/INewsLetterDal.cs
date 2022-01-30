@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccessLayer.Interface
 {
-   public interface IFeature2Dal : IGenericDal<Feature2>
+    public interface INewsLetterDal : IGenericDal<Newsletter>
     {
     }
 }

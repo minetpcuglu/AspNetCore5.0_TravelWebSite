@@ -5,9 +5,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccessLayer.Interface
 {
-   public interface IGenericDal<T> where T : class
+    public interface IGenericDal<T> where T : class
     {
         void insert(T t);
         void Delete(T t);
@@ -16,3 +16,4 @@ namespace DataAccessLayer.Abstract
         List<T> GetListAll(Expression<Func<T, bool>> filter);  //filter 
         T GetById(int id);
     }
+}

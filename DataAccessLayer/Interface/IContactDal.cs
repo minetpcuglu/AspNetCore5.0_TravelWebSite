@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccessLayer.Interface
 {
-   public interface IFeatureDal : IGenericDal<Feature>
+    public interface IContactDal : IGenericDal<Contact>
     {
     }
 }
