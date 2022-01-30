@@ -12,7 +12,12 @@ namespace BusinessLayer.IoC
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<EfAboutRepository>().As<IAboutDal>().InstancePerLifetimeScope();  //**-1- buraya ekleme yapılacak 
+            builder.RegisterType<EfAboutRepository>().As<IAboutDal>().InstancePerLifetimeScope();  //**-1- buraya ekleme yapılacak
+            builder.RegisterType<EfContactRepository>().As<IContactDal>().InstancePerLifetimeScope();
+            builder.RegisterType<EfAbout2Repository>().As<IAbout2Dal>().InstancePerLifetimeScope();
+            builder.RegisterType<EfDestinationRepository>().As<IDestinationDal>().InstancePerLifetimeScope();
+            builder.RegisterType<EfFeatureRepository>().As<IFeatureDal>().InstancePerLifetimeScope();
+            builder.RegisterType<EfFeature2Repository>().As<IFeature2Dal>().InstancePerLifetimeScope();
 
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
         }

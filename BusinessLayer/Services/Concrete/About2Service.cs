@@ -9,37 +9,37 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Concrete
 {
-    public class AboutService : IGenericService<About> //**generic yapıyı ekle.
+    public class About2Service : IGenericService<About2> //**generic yapıyı ekle.
     {
-        private readonly IAboutDal _aboutDal;
 
-        public AboutService(IAboutDal aboutDal)
+        private readonly IAbout2Dal _about2Dal;
+
+        public About2Service(IAbout2Dal about2Dal)
         {
-            _aboutDal = aboutDal;
+            _about2Dal = about2Dal;
         }
 
-        public void Add(About t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(About t)
+        public void Add(About2 t)
         {
             throw new NotImplementedException();
         }
 
-        public About GetById(int id)
+        public void Delete(About2 t)
         {
             throw new NotImplementedException();
         }
 
-        public List<About> GetList()
+        public About2 GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-     
-        public void Update(About t)
+        public List<About2> GetList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(About2 t)
         {
             throw new NotImplementedException();
         }

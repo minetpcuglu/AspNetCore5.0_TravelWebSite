@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Interface
+namespace BusinessLayer.Services.Interface
 {
-    public interface IDesrinationDal : IGenericDal<Destination>
+   public interface IDestinationService : IGenericService<Destination>
     {
     }
 }

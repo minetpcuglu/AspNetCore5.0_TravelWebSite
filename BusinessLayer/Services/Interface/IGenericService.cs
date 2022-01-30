@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Interface
 {
-    interface IGenericService<T>
+   public interface IGenericService<T>
     {
         void Add(T t);
         void Delete(T t);

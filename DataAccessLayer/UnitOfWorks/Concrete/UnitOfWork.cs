@@ -38,6 +38,44 @@ namespace DataAccessLayer.UnitOfWorks.Concrete
                 return _about2Dal;
             }
         }
+        private IContactDal _contactDal;
+        public IContactDal ContactDal
+        {
+            get
+            {
+                if (_contactDal == null) _contactDal = new EfContactRepository(_db);
+                return _contactDal;
+            }
+        }
+        private IDestinationDal _destinationDal;
+        public IDestinationDal DestinationDal //sıkıntı olabilir**
+        {
+            get
+            {
+                if (_destinationDal == null) _destinationDal = new EfDestinationRepository(_db);
+                return _destinationDal;
+            }
+        }
+        private IFeatureDal _featureDal;
+        public IFeatureDal FeatureDal
+        {
+            get
+            {
+                if (_featureDal == null) _featureDal = new EfFeatureRepository(_db);
+                return _featureDal;
+            }
+        }
+
+        private IFeature2Dal _feature2Dal;
+        public IFeature2Dal Feature2Dal 
+        {
+            get
+            {
+                if (_feature2Dal == null) _feature2Dal = new EfFeature2Repository(_db);
+                return _feature2Dal;
+            }
+        }
+
         public void Commit() =>  _db.SaveChangesAsync();
 
 

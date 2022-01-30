@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer.Services.Interface
+namespace DataAccessLayer.Interface
 {
-    public interface IAboutService : IGenericService<About>
+    public interface IDestinationDal : IGenericDal<Destination>
     {
-      
     }
 }
