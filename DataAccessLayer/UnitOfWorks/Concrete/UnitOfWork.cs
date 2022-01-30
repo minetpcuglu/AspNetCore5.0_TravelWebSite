@@ -76,6 +76,47 @@ namespace DataAccessLayer.UnitOfWorks.Concrete
             }
         }
 
+        private IGuideDal _guideDal;
+        public IGuideDal GuideDal
+        {
+            get
+            {
+                if (_guideDal == null) _guideDal = new EfGuideRepository(_db);
+                return _guideDal;
+            }
+        }
+
+        private INewsLetterDal _newsLetterDal;
+        public INewsLetterDal NewsLetterDal
+        {
+            get
+            {
+                if (_newsLetterDal == null) _newsLetterDal = new EfNewsletterRepository(_db);
+                return _newsLetterDal;
+            }
+        }
+        private ISubAboutDal _subAboutDal;
+        public ISubAboutDal SubAboutDal
+        {
+            get
+            {
+                if (_subAboutDal == null) _subAboutDal = new EfSubAboutRepository(_db);
+                return _subAboutDal;
+            }
+        }
+        private ITestimonialDal _testimonialDal;
+        public ITestimonialDal TestimonialDal
+        {
+            get
+            {
+                if (_testimonialDal == null) _testimonialDal = new EfTestimonialRepository(_db);
+                return _testimonialDal;
+            }
+        }
+
+
+
+
         public void Commit() =>  _db.SaveChangesAsync();
 
 

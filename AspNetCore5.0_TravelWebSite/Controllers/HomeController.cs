@@ -1,5 +1,5 @@
 ﻿using AspNetCore5._0_TravelWebSite.Models;
-using DataAccessLayer.Abstract;
+using DataAccessLayer.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

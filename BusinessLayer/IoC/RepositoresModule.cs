@@ -18,6 +18,10 @@ namespace BusinessLayer.IoC
             builder.RegisterType<EfDestinationRepository>().As<IDestinationDal>().InstancePerLifetimeScope();
             builder.RegisterType<EfFeatureRepository>().As<IFeatureDal>().InstancePerLifetimeScope();
             builder.RegisterType<EfFeature2Repository>().As<IFeature2Dal>().InstancePerLifetimeScope();
+            builder.RegisterType<EfGuideRepository>().As<IGuideDal>().InstancePerLifetimeScope();
+            builder.RegisterType<EfNewsletterRepository>().As<INewsLetterDal>().InstancePerLifetimeScope();
+            builder.RegisterType<EfSubAboutRepository>().As<ISubAboutDal>().InstancePerLifetimeScope();
+            builder.RegisterType<EfTestimonialRepository>().As<ITestimonialDal>().InstancePerLifetimeScope();
 
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
         }
