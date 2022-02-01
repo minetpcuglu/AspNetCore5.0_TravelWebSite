@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Services.Interface;
+﻿using BusinessLayer.Models;
+using BusinessLayer.Services.Interface;
 using DataAccessLayer.Interface;
 using EntityLayer.Concrete;
 using System;
@@ -34,9 +35,13 @@ namespace BusinessLayer.Services.Concrete
             throw new NotImplementedException();
         }
 
-        public List<About2> GetList()
+        public IQueryable<AboutViewModel> GetList()
         {
-            throw new NotImplementedException();
+            var list = _about2Dal.GetAll();
+
+            var newlist = list.AsQueryable().Select(x => new AboutViewModel());
+
+            return newlist;
         }
 
         public void Update(About2 t)

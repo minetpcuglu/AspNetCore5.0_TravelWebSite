@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace BusinessLayer.Services.Interface
         void Add(T t);
         void Delete(T t);
         void Update(T t);
-        List<T> GetList();
+        IQueryable<AboutViewModel> GetList();
 
         T GetById(int id);
     }

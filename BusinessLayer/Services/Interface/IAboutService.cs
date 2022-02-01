@@ -1,4 +1,5 @@
-﻿using EntityLayer.Concrete;
+﻿using BusinessLayer.Models;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Interface
 {
-    public interface IAboutService : IGenericService<About>
+    public interface IAboutService 
     {
-      
+        IQueryable<AboutViewModel> GetList();
     }
 }

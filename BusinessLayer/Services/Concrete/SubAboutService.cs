@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Concrete
 {
-  public class SubAboutService : IGenericService<SubAbout> //**generic yapıyı ekle.
+  public class SubAboutService 
     {
         private readonly ISubAboutDal _SubAboutDal;
 

@@ -1,6 +1,10 @@
+using BusinessLayer.Services.Concrete;
+using BusinessLayer.Services.Interface;
+using DataAccessLayer.Concrete.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +28,10 @@ namespace AspNetCore5._0_TravelWebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            //services.AddScoped<IAboutService, AboutService>();
+
+            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))); // **appsettigns context tasýma iþlemi :P
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

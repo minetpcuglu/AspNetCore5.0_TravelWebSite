@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Services.Interface;
+﻿using BusinessLayer.Models;
+using BusinessLayer.Services.Interface;
 using DataAccessLayer.Interface;
 using EntityLayer.Concrete;
 using System;
@@ -33,9 +34,9 @@ namespace BusinessLayer.Services.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Destination> GetList()
+        public IQueryable<AboutViewModel> GetList()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public void Update(Destination t)

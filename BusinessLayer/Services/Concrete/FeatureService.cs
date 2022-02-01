@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Concrete
 {
-   public class FeatureService : IGenericService<Feature> //**generic yapıyı ekle.
+   public class FeatureService 
     {
         private readonly IFeatureDal _featureDal;
 
@@ -34,12 +34,9 @@ namespace BusinessLayer.Services.Concrete
             throw new NotImplementedException();
         }
 
-        Feature IGenericService<Feature>.GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
+      
 
-        List<Feature> IGenericService<Feature>.GetList()
+       public List<Feature> GetList()
         {
             throw new NotImplementedException();
         }

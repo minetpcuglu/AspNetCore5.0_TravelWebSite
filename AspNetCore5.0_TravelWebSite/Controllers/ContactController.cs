@@ -9,18 +9,18 @@ namespace AspNetCore5._0_TravelWebSite.Controllers
 {
     public class ContactController : Controller
     {
-        private readonly IContactService _contactService;
+        //private readonly IContactService _contactService;
         
 
-        public ContactController(IContactService contactService)
-        {
-            _contactService = contactService;
+        //public ContactController(IContactService contactService)
+        //{
+        //    _contactService = contactService;
   
-        }
+        //}
 
         public IActionResult Index()
         {
-            _contactService.GetList();
+            //_contactService.GetList();
             return View();
         }
     }

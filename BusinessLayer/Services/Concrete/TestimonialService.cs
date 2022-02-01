@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Concrete
 {
-   public class TestimonialService : IGenericService<Testimonial> //**generic yapıyı ekle.
+   public class TestimonialService 
     {
         private readonly ITestimonialDal _testimonialDal;
 

@@ -10,10 +10,6 @@ namespace DataAccessLayer.Concrete.Context
 {
   public  class Context:DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("server=DESKTOP-RQ8KHFA;database=TravelCoreDb;integrated security=true;");
-        }
         public DbSet<About> Abouts { get; set; }
         public DbSet<About2> About2s { get; set; }
         public DbSet<Contact> Contacts { get; set; }

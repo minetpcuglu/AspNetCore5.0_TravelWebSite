@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Concrete
 {
-    public class GuideService : IGenericService<Guide> //**generic yapıyı ekle.
+    public class GuideService 
     {
         private readonly IGuideDal _guideDal;
 

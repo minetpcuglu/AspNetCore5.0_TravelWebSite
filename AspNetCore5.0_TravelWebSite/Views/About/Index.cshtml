@@ -1,0 +1,23 @@
+﻿@model List<AboutViewModel>
+<table class="table table-bordered">
+    <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AboutId</td>
+            <td>@item.Description</td>
+            <td>@item.Description2</td>
+            <td>@item.Image1</td>
+
+        </tr>
+    }
+</table>

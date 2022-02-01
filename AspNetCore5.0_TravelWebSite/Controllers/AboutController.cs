@@ -21,8 +21,8 @@ namespace AspNetCore5._0_TravelWebSite.Controllers
 
         public IActionResult Index()
         {
-            _aboutService.GetList();   
-            return View();
+            var list = _aboutService.GetList();   
+            return View(list);
         }
     }
 }

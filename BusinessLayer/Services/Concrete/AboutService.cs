@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Services.Interface;
+﻿using BusinessLayer.Models;
+using BusinessLayer.Services.Interface;
 using DataAccessLayer.Interface;
 using EntityLayer.Concrete;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Services.Concrete
 {
-    public class AboutService : IGenericService<About> //**generic yapıyı ekle.
+    public class AboutService : IAboutService //**generic yapıyı ekle.
     {
         private readonly IAboutDal _aboutDal;
 
@@ -33,9 +34,13 @@ namespace BusinessLayer.Services.Concrete
             throw new NotImplementedException();
         }
 
-        public List<About> GetList()
+        public IQueryable<AboutViewModel> GetList()
         {
-            throw new NotImplementedException();
+            var list = _aboutDal.GetAll();
+
+            var newlist = list.AsQueryable().Select(x => new AboutViewModel());
+
+            return newlist;
         }
 
      

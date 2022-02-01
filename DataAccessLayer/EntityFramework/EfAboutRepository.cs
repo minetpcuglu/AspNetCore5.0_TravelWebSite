@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Concrete.Context;
+﻿using BusinessLayer.Models;
+using DataAccessLayer.Concrete.Context;
 using DataAccessLayer.Interface;
 using DataAccessLayer.Repositories.GenericRepository;
 using EntityLayer.Concrete;
@@ -10,11 +11,19 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
-    public class EfAboutRepository : GenericRepository<About>, IAboutDal
+    public class EfAboutRepository  /*IAboutDal*/
     {
         public EfAboutRepository(Context context)
         {
 
+        }
+
+        public List<AboutViewModel> GetAll()
+        {
+            //         using var c = new Context();
+            //        return c.Set<T>().ToList();
+            return null;
+            
         }
     }
 }
